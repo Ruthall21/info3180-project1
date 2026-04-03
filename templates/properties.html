@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="container mt-5 pt-4">
+    <h2 class="mb-4">Properties</h2>
+
+    <div class="row">
+        {% for property in properties %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+
+                <!-- Property Image (SAFE) -->
+                <img src="{{ url_for('static', filename='uploads/' ~ (property.photo if property.photo else 'property.png')) }}" 
+                     class="card-img-top" 
+                     alt="{{ property.title }}" 
+                     style="height: 200px; object-fit: cover;">
+
+                <div class="card-body">
+                    
+                    <!-- Title -->
+                    <h5 class="card-title">{{ property.title }}</h5>
+
+                    <!-- Location -->
+                    <p class="text-muted">{{ property.location }}</p>
+
+                    <!-- Price -->
+                    <p class="fw-bold">{{ property.price }}</p>
+
+                    <!-- View Button (FIXED ROUTE) -->
+                    <a href="{{ url_for('property_detail', propertyid=property.id) }}" 
+                       class="btn btn-primary">
+                        View Property
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="col-12">
+            <p>No properties available.</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

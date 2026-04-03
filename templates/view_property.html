@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="container mt-4">
+
+    <!-- Title -->
+    <h2 class="mb-3">{{ property.title }}</h2>
+
+    <div class="row">
+        
+        <!-- Image -->
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='uploads/' ~ (property.photo if property.photo else 'property.png')) }}" 
+                 alt="{{ property.title }}" 
+                 class="img-fluid rounded">
+        </div>
+
+        <!-- Details -->
+        <div class="col-md-6">
+            <h4 class="text-primary">{{ property.price }}</h4>
+
+            <p><strong>Location:</strong> {{ property.location }}</p>
+            <p><strong>Type:</strong> {{ property.property_type }}</p>
+            <p><strong>Bedrooms:</strong> {{ property.bedrooms }}</p>
+            <p><strong>Bathrooms:</strong> {{ property.bathrooms }}</p>
+
+            <hr>
+
+            <p>{{ property.description }}</p>
+
+            <a href="mailto:realtor@example.com?subject=Inquiry about {{ property.title }}" 
+            class="btn btn-success mt-3">
+            Email Realtor
+            </a>
+
+            <br><br>
+
+            <a href="{{ url_for('properties') }}" class="btn btn-secondary">
+                Back to Properties
+            </a>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

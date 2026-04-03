@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="container">
+    <h2>Add New Property</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+
+        <div>
+            {{ form.title.label }} <br>
+            {{ form.title(class="form-control") }}
+        </div>
+
+        <div>
+            {{ form.description.label }} <br>
+            {{ form.description(class="form-control") }}
+        </div>
+
+        <div>
+            {{ form.bedrooms.label }} <br>
+            {{ form.bedrooms(class="form-control") }}
+        </div>
+
+        <div>
+            {{ form.bathrooms.label }} <br>
+            {{ form.bathrooms(class="form-control") }}
+        </div>
+
+        <div>
+            {{ form.location.label }} <br>
+            {{ form.location(class="form-control") }}
+        </div>
+
+        <div>
+            {{ form.price.label }} <br>
+            {{ form.price(class="form-control") }}
+        </div>
+
+        <div>
+            {{ form.property_type.label }} <br>
+            {{ form.property_type(class="form-control") }}
+        </div>
+
+        <div>
+            {{ form.photo.label }} <br>
+            {{ form.photo(class="form-control") }}
+        </div>
+
+        <br>
+        <button type="submit">Add Property</button>
+    </form>
+</div>
+{% endblock %}

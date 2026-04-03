@@ -1,0 +1,95 @@
+/* =========================
+   RESET / GLOBAL
+========================= */
+body {
+    padding-top: 70px; /* prevents navbar overlap */
+    background-color: #f8f9fa;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+main .container {
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* =========================
+   FORM STYLING
+========================= */
+form div {
+    margin-bottom: 15px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button, .btn {
+    margin-top: 10px;
+}
+
+/* =========================
+   PROPERTY CARDS
+========================= */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-text {
+    margin-bottom: 10px;
+}
+
+/* =========================
+   PROPERTY DETAIL PAGE
+========================= */
+img.img-fluid {
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
